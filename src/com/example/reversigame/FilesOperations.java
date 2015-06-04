@@ -22,6 +22,7 @@ public class FilesOperations {
 					  outputStream.write(string.getBytes());
 					  
 				}}
+			outputStream.flush();
 			outputStream.close();
 		}catch (Exception e ){
 			e.printStackTrace();

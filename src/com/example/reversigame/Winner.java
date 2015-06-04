@@ -8,21 +8,25 @@ import android.content.DialogInterface;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
  
 
 public class Winner extends Activity {
 
 	final Context context = this;
 	private Button button;
+	
  
 	public void onCreate(Bundle savedInstanceState) {
  
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_winner);
- 
- 
+		
+		TextView textview=(TextView)findViewById(R.id.textView1);
+		textview.setText(getIntent().getStringExtra("text"));
+		
 		// add button listener
-		button.setOnClickListener(new OnClickListener() {
+		/*button.setOnClickListener(new OnClickListener() {
  
 		@Override
 		public void onClick(View arg0) {
@@ -60,5 +64,6 @@ public class Winner extends Activity {
 			}
 		});
 	}
-
+*/
+	}
 }

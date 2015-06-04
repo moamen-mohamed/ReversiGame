@@ -20,6 +20,7 @@ public class LocalBoard extends Activity {
 	TextView sc1 , sc2;
 	GameLogic logic = new GameLogic();
 	int [] result = new int[2];
+	String winner = "";
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -211,6 +212,20 @@ public class LocalBoard extends Activity {
 				}
 			}			
 		}
+		/*if (Integer.parseInt(sc1.toString()) > Integer.parseInt(sc2.toString())){
+			Intent intent=new Intent(LocalBoard.this,Winner.class);
+			winner = getIntent().getStringExtra("text");
+			intent.putExtra("text", winner);
+			startActivity(intent);
+		} else if (Integer.parseInt(sc1.toString()) < Integer.parseInt(sc2.toString())){
+			Intent intent=new Intent(LocalBoard.this,Winner.class);
+			intent.putExtra("text", "Computer");
+			startActivity(intent);
+		} else if (Integer.parseInt(sc1.toString()) == Integer.parseInt(sc2.toString())){
+			Intent intent=new Intent(LocalBoard.this,Winner.class);
+			intent.putExtra("text", "No Winner it's Draw");
+			startActivity(intent);
+		}*/
 	}
 
 }
